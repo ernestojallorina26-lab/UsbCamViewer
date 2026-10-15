@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">USB Cam Viewer</string>
+    <string name="hint_no_camera">Plug in a USB camera or capture card with an OTG cable</string>
+    <string name="btn_snapshot">Photo</string>
+    <string name="btn_record_start">Record</string>
+    <string name="btn_record_stop">Stop</string>
+    <string name="toast_saved">Saved: %1$s</string>
+    <string name="toast_error">Error: %1$s</string>
+    <string name="toast_no_camera">No camera connected yet</string>
+</resources>

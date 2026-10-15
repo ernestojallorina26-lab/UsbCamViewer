@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Simple camera glyph -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,40 L42,40 L46,34 L62,34 L66,40 L78,40 A4,4 0 0 1 82,44 L82,70 A4,4 0 0 1 78,74 L30,74 A4,4 0 0 1 26,70 L26,44 A4,4 0 0 1 30,40 Z" />
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M54,46 A11,11 0 1 0 54,68 A11,11 0 1 0 54,46 Z" />
+</vector>

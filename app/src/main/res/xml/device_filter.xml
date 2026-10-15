@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- USB Video Class devices: class 14 (0x0E) = Video, any subclass/protocol. -->
+    <usb-device class="14" />
+    <!-- Some capture cards report as vendor-specific/miscellaneous; class 239 (0xEF) = Miscellaneous (IAD). -->
+    <usb-device class="239" subclass="2" protocol="1" />
+</resources>
