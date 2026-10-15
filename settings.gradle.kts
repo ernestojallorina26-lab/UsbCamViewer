@@ -11,10 +11,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://jitpack.io") }
-        // Fallback source for older libraries the USB camera library depends on.
-        @Suppress("DEPRECATION")
-        jcenter()
+        // JitPack only for the USB camera library and its own modules.
+        maven {
+            url = uri("https://jitpack.io")
+            content {
+                includeGroupByRegex("com\\.github\\..*")
+            }
+        }
     }
 }
 
