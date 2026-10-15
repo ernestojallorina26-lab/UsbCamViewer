@@ -5,7 +5,18 @@
     <string name="btn_snapshot">Photo</string>
     <string name="btn_record_start">Record</string>
     <string name="btn_record_stop">Stop</string>
+    <string name="btn_audio_on">Audio: ON</string>
+    <string name="btn_audio_off">Audio: OFF</string>
+    <string name="btn_size">Size</string>
+    <string name="dialog_size_title">Video size</string>
     <string name="toast_saved">Saved: %1$s</string>
     <string name="toast_error">Error: %1$s</string>
     <string name="toast_no_camera">No camera connected yet</string>
+    <string name="toast_audio_on">Playing USB audio</string>
+    <string name="toast_audio_off">Audio off</string>
+    <string name="toast_no_usb_audio">No USB audio found. The capture card may not have audio, or the phone does not expose it.</string>
+    <string name="toast_no_mic_permission">Microphone permission is needed for USB audio</string>
+    <string name="toast_audio_failed">Could not start USB audio</string>
+    <string name="toast_no_sizes">No video sizes available yet</string>
+    <string name="toast_size_changed">Size: %1$s</string>
 </resources>

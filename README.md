@@ -24,7 +24,10 @@ Open this folder in Android Studio (Hedgehog or newer), let it sync, then **Buil
 
 1. Open the app and allow the camera and microphone permissions (Android requires the camera permission for USB cameras too; the microphone is only for video recording).
 2. Plug in the camera with the OTG cable. Android will ask to let the app use the USB device; accept.
-3. The live preview appears. Use **Photo** to take a picture and **Record / Stop** for video.
+3. The live preview appears full screen (landscape, screen stays on). Tap the picture to show or hide the buttons:
+   - **Photo** and **Record / Stop** save a picture or video.
+   - **Audio** plays the sound from a capture card (for example Xbox 360 or PSP game sound) through the phone. It only works when the phone sees a USB audio input.
+   - **Size** lets you pick the video resolution.
 
 Photos and videos are saved in `Android/data/com.example.usbcamviewer/files/captures/` on the phone.
 
