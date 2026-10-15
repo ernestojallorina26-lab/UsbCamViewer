@@ -31,4 +31,4 @@ Photos and videos are saved in `Android/data/com.example.usbcamviewer/files/capt
 ## Notes
 
 - Not every phone supports USB cameras, and a few cameras use non-standard formats. If the preview stays black, try another camera or cable.
-- The code uses the open-source AndroidUSBCamera library (`libausbc`). It was written without being compiled in the environment it was created in, so if the first build reports an error, send the message back and it can be fixed quickly.
+- The code uses the open-source AndroidUSBCamera library (`libausbc`, version 3.2.7). It was written without being compiled in the environment it was created in, so if the first build reports an error, send the message back and it can be fixed quickly.

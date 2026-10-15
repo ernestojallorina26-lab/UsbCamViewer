@@ -43,5 +43,5 @@ dependencies {
 
     // UVC (USB Video Class) camera support. Used at build time only;
     // the finished APK contains everything it needs and runs fully offline.
-    implementation("com.github.jiangdongguo.AndroidUSBCamera:libausbc:3.3.3")
+    implementation("com.github.jiangdongguo.AndroidUSBCamera:libausbc:3.2.7")
 }
