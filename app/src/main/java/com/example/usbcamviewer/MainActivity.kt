@@ -2,15 +2,20 @@ package com.example.usbcamviewer
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.ScrollView
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import java.io.File
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,11 +40,46 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         hideSystemBars()
 
+        // If the app crashed last time, show the error on screen before doing anything else.
+        val crashFile = File(filesDir, App.CRASH_FILE)
+        if (crashFile.exists()) {
+            showCrashReport(crashFile)
+            return
+        }
+
         if (hasAllPermissions()) {
             showCamera(savedInstanceState)
         } else {
             ActivityCompat.requestPermissions(this, requiredPermissions, REQUEST_PERMISSIONS)
         }
+    }
+
+    private fun showCrashReport(crashFile: File) {
+        val report = try {
+            crashFile.readText()
+        } catch (e: Exception) {
+            "Could not read the crash report: ${e.message}"
+        }
+        val text = TextView(this).apply {
+            this.text = report
+            setTextIsSelectable(true)
+            setTextColor(Color.WHITE)
+            textSize = 11f
+            setPadding(32, 32, 32, 32)
+        }
+        val scroll = ScrollView(this).apply {
+            setBackgroundColor(Color.BLACK)
+            addView(text)
+        }
+        AlertDialog.Builder(this)
+            .setTitle("The app closed because of an error")
+            .setView(scroll)
+            .setCancelable(false)
+            .setPositiveButton("Continue") { _, _ ->
+                crashFile.delete()
+                recreate()
+            }
+            .show()
     }
 
     override fun onResume() {
